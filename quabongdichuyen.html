@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="https://image.voso.vn/users/vosoimage/images/b60663544c8ae0a12a581074b898f1a0?t%5B0%5D=compress%3Alevel%3D100&accessToken=137f28aae1c91658d22ab8d250e926f53efa6c60cb4cbbfd4d1ee440858ff988" style="width: 300px" alt="">
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="Move Now" onclick="moveRight()"/>
+</form>
+<script>
+    let imgObj;
+    // imgObj = document.getElementById("myImage");
+    function init() {
+        imgObj = document.getElementById("myImage");
+        imgObj.style.position = "relative";
+        imgObj.style.left = "0px"
+    }
+    function moveRight() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 40 + "px"
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
