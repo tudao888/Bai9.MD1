@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="https://ae01.alicdn.com/kf/HTB1pmY1MpXXXXawXpXXq6xXFXXXK/Doraemon-Nobita-Nobi-Trang-Ph-c-H-a-Trang-Anime-T-L-m-ng-Ph-c.jpg" id="nobita" style="position:absolute;left:0; top:0;" height="100" width="80"/>
+<script>
+    function presstoUp() {
+        let element = document.getElementById("nobita")
+        element.style.top = parseInt(element.style.top) - 15 + "px"
+    }
+    function presstoDown() {
+        let element = document.getElementById("nobita")
+        element.style.top = parseInt(element.style.top) + 15 + "px"
+    }
+    function presstoLeft() {
+        let element = document.getElementById("nobita")
+        element.style.left = parseInt(element.style.left) - 15 + "px"
+    }
+    function presstoRight() {
+        let element = document.getElementById("nobita")
+        element.style.left = parseInt(element.style.left) + 15 + "px"
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                presstoLeft();
+                break;
+            case 39:
+                presstoRight();
+                break;
+            case 38:
+                presstoUp();
+                break;
+            case 40:
+                presstoDown();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+    docReady();
+</script>
+</body>
+</html>
