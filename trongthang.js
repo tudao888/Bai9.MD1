@@ -38,5 +38,6 @@ function kiemtra() {
             break;
         default: document.getElementById("result").innerHTML = "khong co thang nay"
             break;
+
 }
 }
